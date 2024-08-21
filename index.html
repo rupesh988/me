@@ -51,7 +51,7 @@
             margin-top: 20px;
         }
         .link-block {
-            background-color: #007bff;
+            background-color: #ff6f61;
             color: white;
             padding: 12px 20px;
             border-radius: 8px;
@@ -62,7 +62,7 @@
             transition: transform 0.3s, background-color 0.3s;
         }
         .link-block:hover {
-            background-color: #0056b3;
+            background-color: #e55b5b;
             transform: translateY(-3px);
         }
         .link-block:active {
@@ -87,6 +87,25 @@
                 opacity: 1;
             }
         }
+        .animated-man {
+            position: absolute;
+            bottom: 10%;
+            right: -100px;
+            width: 100px;
+            height: 150px;
+            animation: slideIn 3s ease-out infinite;
+        }
+        @keyframes slideIn {
+            0% {
+                transform: translateX(100%);
+            }
+            50% {
+                transform: translateX(-10%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
     </style>
 </head>
 <body>
@@ -106,5 +125,6 @@
         </div>
     </div>
     <div class="lightning"></div>
+    <img src="https://via.placeholder.com/100x150?text=Hi" alt="Animated Man" class="animated-man">
 </body>
 </html>
