@@ -14,9 +14,9 @@
             height: 100vh;
             margin: 0;
             background: linear-gradient(to bottom right, #f5f5f5, #e2e2e2);
-            overflow: hidden; /* Prevent scrollbars due to animations */
             color: #212529;
             position: relative; /* Ensure absolute positioning of SVG is relative to body */
+            overflow: hidden; /* Prevent scrollbars due to animations */
         }
 
         .container {
@@ -28,41 +28,35 @@
             width: 100%;
             position: relative;
             z-index: 10; /* Ensure content is above animated elements */
-            overflow: hidden; /* Ensure contents stay within bounds */
             text-align: center;
+            margin: 0 10px; /* Add 10px margin to left and right */
         }
 
-    
-          
-            
-    
-
-          
-          Expand Down
-    
-    
-  
         h1 {
             color: #007bff;
             font-size: 2.5em;
             margin: 0;
             transition: text-shadow 0.3s ease-in-out;
         }
+
         h1:hover {
             text-shadow: 0 0 10px #ff0000, 0 0 20px #ff1900, 0 0 30px #fe0000, 0 0 40px #ff0000;
         }
+
         .lyrics {
             font-size: 1.15em;
             color: #495057;
             margin: 20px 0;
             line-height: 1.6;
         }
+
         .links {
             display: flex;
             flex-direction: column;
             gap: 15px;
             margin-top: 20px;
         }
+
         .link-block {
             background-color: #ff6f61;
             color: white;
@@ -74,13 +68,16 @@
             text-decoration: none;
             transition: transform 0.4s, background-color 0.3s;
         }
+
         .link-block:hover {
             background-color: #3dffcb;
             transform: translateY(-3px);
         }
+
         .link-block:active {
             transform: translateY(1px);
         }
+
         .lightning {
             position: absolute;
             top: 0;
@@ -92,6 +89,7 @@
             animation: lightning 1.5s infinite;
             mix-blend-mode: multiply;
         }
+
         @keyframes lightning {
             0%, 100% {
                 opacity: 0;
@@ -100,15 +98,17 @@
                 opacity: 1;
             }
         }
+
         .animated-man {
             position: absolute;
-            top: 10px; /* Adjust this value as needed */
+            top: -60px; /* Move the SVG to the top of the container */
             left: 50%;
             transform: translateX(-50%); /* Center horizontally */
             width: 120px;
             height: auto;
             animation: slideIn 3s ease-out infinite;
         }
+
         @keyframes slideIn {
             0% {
                 transform: translateX(50%) translateY(0);
@@ -120,6 +120,7 @@
                 transform: translateX(50%) translateY(0);
             }
         }
+
         @media (max-width: 768px) {
             .container {
                 padding: 20px;
@@ -135,6 +136,7 @@
                 padding: 10px 15px;
             }
         }
+
         @media (max-width: 480px) {
             h1 {
                 font-size: 1.5em;
@@ -149,6 +151,7 @@
     </style>
 </head>
 <body>
+    <img src="avatar-batman-comics-svgrepo-com.svg" alt="Animated Man" class="animated-man">
     <div class="container">
         <h1>Rupesh</h1>
         <div class="lyrics">
@@ -165,6 +168,5 @@
         </div>
     </div>
     <div class="lightning"></div>
-    <img src="avatar-batman-comics-svgrepo-com.svg" alt="Animated Man" class="animated-man">
 </body>
 </html>
