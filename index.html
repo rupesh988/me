@@ -46,6 +46,7 @@
             color: #495057;
             margin: 20px 0;
             line-height: 1.6;
+            text-align: left; /* Align text to the left */
         }
         .links {
             display: flex;
@@ -142,11 +143,7 @@
     <div class="container">
         <h1>Rupesh</h1>
         <div class="lyrics">
-            <p>It's me, hi</p>
-            <p>I'm the problem, it's me</p>
-            <p>At teatime, everybody agrees</p>
-            <p>I'll stare directly at the sun, but never in the mirror</p>
-            <p>It must be exhausting always rooting for the anti-hero - Taylor Swift</p>
+            <!-- Lyrics will be displayed here word by word -->
         </div>
         <div class="links">
             <a href="https://www.linkedin.com/in/rupesh988" target="_blank" class="link-block">LinkedIn</a>
@@ -156,5 +153,41 @@
     </div>
     <div class="lightning"></div>
     <img src="avatar-batman-comics-svgrepo-com.svg" alt="Animated Man" class="animated-man">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const lyricsElement = document.querySelector('.lyrics');
+            const lyrics = [
+                "It's me, hi",
+                "I'm the problem, it's me",
+                "At teatime, everybody agrees",
+                "I'll stare directly at the sun, but never in the mirror",
+                "It must be exhausting always rooting for the anti-hero - Taylor Swift"
+            ];
+
+            // Function to display words one by one
+            const displayLyrics = (lyricsArray) => {
+                let index = 0;
+                let wordIndex = 0;
+                const interval = setInterval(() => {
+                    if (index < lyricsArray.length) {
+                        let line = lyricsArray[index];
+                        let words = line.split(' ');
+                        if (wordIndex < words.length) {
+                            lyricsElement.innerHTML += words[wordIndex] + ' ';
+                            wordIndex++;
+                        } else {
+                            lyricsElement.innerHTML += '<br>'; // Move to the next line
+                            wordIndex = 0;
+                            index++;
+                        }
+                    } else {
+                        clearInterval(interval); // Stop when all lyrics are displayed
+                    }
+                }, 300); // Adjust the speed of word display here (milliseconds)
+            };
+
+            displayLyrics(lyrics);
+        });
+    </script>
 </body>
 </html>
