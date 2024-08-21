@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>its, Rupesh</title>
+    <title>Contact Me</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
@@ -19,7 +20,9 @@
             background-color: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 10, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
         }
         h1 {
             color: #333;
@@ -27,6 +30,26 @@
         .lyrics {
             font-size: 1.2em;
             color: #555;
+            margin-bottom: 20px;
+        }
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .link-block {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.3s;
+        }
+        .link-block:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -39,6 +62,11 @@
             <p>At teatime, everybody agrees</p>
             <p>I'll stare directly at the sun, but never in the mirror</p>
             <p>It must be exhausting always rooting for the anti-hero</p>
+        </div>
+        <div class="links">
+            <a href="https://www.linkedin.com/in/rupesh988" target="_blank" class="link-block">LinkedIn</a>
+            <a href="https://www.instagram.com/rupesh.reddy1" target="_blank" class="link-block">Instagram</a>
+            <a href="mailto:inrupesh.in@gmail.com" class="link-block">Email</a>
         </div>
     </div>
 </body>
