@@ -13,12 +13,12 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            background-color: #f8f9fa;
+            background: linear-gradient(to bottom right, #f5f5f5, #e2e2e2);
             overflow: hidden; /* Prevent scrollbars due to animations */
             color: #212529;
         }
         .container {
-            background: linear-gradient(135deg, #ffffff, #e9ecef);
+            background: #ffffff;
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
@@ -27,12 +27,16 @@
             position: relative;
             z-index: 10; /* Ensure content is above animated elements */
             overflow: hidden; /* Ensure contents stay within bounds */
+            text-align: center;
         }
         h1 {
             color: #007bff;
             font-size: 2.5em;
             margin: 0;
-            animation: bounceIn 2s ease-out;
+            transition: text-shadow 0.3s ease-in-out;
+        }
+        h1:hover {
+            text-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 30px #007bff, 0 0 40px #007bff;
         }
         .lyrics {
             font-size: 1.15em;
@@ -64,40 +68,23 @@
         .link-block:active {
             transform: translateY(1px);
         }
-        .bouncing-ball {
+        .lightning {
             position: absolute;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            animation: bounce 2s infinite;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: radial-gradient(circle, rgba(255,255,255,0) 30%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 70%);
+            animation: lightning 1.5s infinite;
+            mix-blend-mode: multiply;
         }
-        .bouncing-ball:nth-child(2) {
-            background-color: #28a745;
-            animation-duration: 2.5s;
-        }
-        .bouncing-ball:nth-child(3) {
-            background-color: #ffc107;
-            animation-duration: 3s;
-        }
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-100px);
-            }
-            60% {
-                transform: translateY(-50px);
-            }
-        }
-        @keyframes bounceIn {
-            from {
+        @keyframes lightning {
+            0%, 100% {
                 opacity: 0;
-                transform: translateY(-30px);
             }
-            to {
+            50% {
                 opacity: 1;
-                transform: translateY(0);
             }
         }
     </style>
@@ -118,9 +105,6 @@
             <a href="mailto:inrupesh.in@gmail.com" class="link-block">Email</a>
         </div>
     </div>
-    
-    <div class="bouncing-ball" style="top: 15%; left: 10%;"></div>
-    <div class="bouncing-ball" style="top: 60%; left: 75%;"></div>
-    <div class="bouncing-ball" style="top: 45%; left: 50%;"></div>
+    <div class="lightning"></div>
 </body>
 </html>
