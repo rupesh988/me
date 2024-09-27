@@ -16,8 +16,8 @@
             margin: 10px;
             background: linear-gradient(to bottom right, #e3e3e3, #e2e2e2);
             color: #212529;
-            position: relative; /* Ensure absolute positioning of SVG is relative to body */
-            overflow: hidden; /* Prevent scrollbars due to animations */
+            position: relative;
+            overflow: hidden;
         }
 
         .container {
@@ -28,9 +28,9 @@
             max-width: 600px;
             width: 100%;
             position: relative;
-            z-index: 10; /* Ensure content is above animated elements */
+            z-index: 10;
             text-align: center;
-            margin: 0 10px; /* Add 10px margin to left and right */
+            margin: 0 10px;
         }
 
         h1 {
@@ -44,13 +44,12 @@
             text-shadow: 0 0 10px #ff0000, 0 0 20px #ff1900, 0 0 30px #fe0000, 0 0 40px #ff0000;
         }
 
-        .lyrics {
+        .about {
             font-size: 1.15em;
             color: #495057;
             margin: 20px 0;
             line-height: 1.6;
             text-align: left;
-            padding-right: 10px;
         }
 
         .links {
@@ -106,17 +105,15 @@
             position: absolute;
             top: 30px; 
             left: 50%;
-            transform: translateX(-50%); /* Center horizontally */
+            transform: translateX(-50%);
             width: 120px;
             height: auto;
             animation: slideIn 3s ease-out infinite;
         }
 
-        .animated-man:hover{
+        .animated-man:hover {
             width: 125px;
-
         }
-
 
         @keyframes slideIn {
             0% {
@@ -138,7 +135,7 @@
             h1 {
                 font-size: 2em;
             }
-            .lyrics {
+            .about {
                 font-size: 1em;
             }
             .link-block {
@@ -150,7 +147,7 @@
             h1 {
                 font-size: 1.5em;
             }
-            .lyrics {
+            .about {
                 font-size: 0.9em;
             }
             .link-block {
@@ -163,22 +160,15 @@
     <img src="avatar-batman-comics-svgrepo-com.svg" alt="Animated Man" class="animated-man">
     <div class="container">
         <h1>Rupesh</h1>
-        <div class="lyrics">
-            <p>It's me, hi</p>
-            <p>I'm the problem, it's me</p>
-            <p>At teatime, everybody agrees</p>
-            <p>I'll stare directly at the sun, but never in the mirror</p>
-            <p>It must be exhausting always rooting for the anti-hero </p>
-            <p>        - Taylor Swift</p>
+        <div class="about">
+            <p>Computer Science Student | Anime Enthusiast</p>
+            <p>Passionate about technology and solving real-world problems.</p>
         </div>
         <div class="links">
             <a href="mailto:inrupesh.in@gmail.com" class="link-block">Email</a>
             <a href="https://www.linkedin.com/in/rupesh988" target="_blank" class="link-block">LinkedIn</a>
-            
-            
             <a href="https://github.com/rupesh988" target="_blank" class="link-block">Github</a>
             <a href="https://www.instagram.com/rupesh.reddy1" target="_blank" class="link-block">Instagram</a>
-            
         </div>
     </div>
     <div class="lightning"></div>
